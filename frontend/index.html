@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Healthcare System</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#" class="logo">HealthCare</a>
+            <div class="nav-items">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#doctors">Find Doctors</a>
+                <a href="#Reports">Reports</a>
+                <a href="#emergency">Emergency</a>
+                <a href="#login" class="login-btn">Login</a>
+                <a href="#signup" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- Home Section -->
+
+    
+    <section id="home" class="section">
+        <div class="hero">
+            <h1>Better Maternal Health Outcomes Start Here</h1>
+            <p>Your trusted companion throughout your pregnancy journey</p>
+            <button class="cta-button" onclick="madhu()" >Get Started</button>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <img src="/api/placeholder/64/64" alt="Health Monitoring">
+                <h3>Health Monitoring</h3>
+                <p>Track your pregnancy journey with personalized health monitoring tools</p>
+            </div>
+            <div class="feature-card">
+                <img src="/api/placeholder/64/64" alt="Doctor Consultation">
+                <h3>Expert Consultation</h3>
+                <p>Connect with qualified healthcare professionals</p>
+            </div>
+            <div class="feature-card">
+                <img src="/api/placeholder/64/64" alt="Emergency Support">
+                <h3>24/7 Emergency Support</h3>
+                <p>Immediate assistance when you need it most</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="section hidden">
+        <div class="login-container">
+            <h2>Welcome Back</h2>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+                <p class="form-link">Don't have an account? <a href="#signup">Sign up</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup" class="section hidden">
+        <div class="signup-container">
+            <h2>Create Account</h2>
+            <form id="signupForm" class="signup-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <!-- <button type="submit" class="btn-primary">Sign Up</button> -->
+                 
+                <button type="submit" class="btn-primary" id="signupButton">Sign Up</button>
+
+                <p class="form-link">Already have an account? <a href="#login">Login</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section hidden">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p>We are dedicated to improving maternal healthcare access and outcomes through innovative technology solutions.</p>
+            <div class="team-section">
+                <h3>Our Team</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="/api/placeholder/150/150" alt="Team Member">
+                        <h4>Basavanjali N M</h4>
+                        <p>Team Leader</p>
+                    </div>
+                    <!-- Add other team members similarly -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find Doctors Section -->
+    <section id="doctors" class="section hidden">
+        <div class="doctors-container">
+            <h2>Find Nearby Doctors</h2>
+            <div class="search-container">
+                <input type="text" id="locationSearch" placeholder="Enter your location">
+                <button onclick="searchDoctors()" class="btn-primary">Search</button>
+            </div>
+            <div id="map" class="map-container"></div>
+            <div id="doctorsList" class="doctors-list"></div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section id="emergency" class="section hidden">
+        <div class="emergency-container">
+            <h2>Emergency Assistance</h2>
+            <div class="emergency-options">
+                <button onclick="callEmergency()" class="emergency-btn">
+                    Call Emergency Services
+                </button>
+                <button onclick="findNearestHospital()" class="emergency-btn">
+                    Find Nearest Hospital
+                </button>
+            </div>
+            <div id="emergencyMap" class="map-container"></div>
+            <div class="emergency-contacts">
+                <h3>Emergency Contacts</h3>
+                <ul id="emergencyContactsList"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Button (Fixed) -->
+    <button class="emergency-button" onclick="handleEmergency()">
+        Emergency Assistance
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

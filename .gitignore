@@ -1,0 +1,62 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Dependency directories
+bower_components/
+
+# Build/Output directories
+dist/
+build/
+public/
+out/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.bak
+*.pid
+*.seed
+*.backup
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+*.iml
+
+# OS/System files
+Thumbs.db
+*.~lock.*
+*.~undo.*
+*.orig
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# React/Vue/Angular specific files (frontend frameworks)
+**/coverage/
+**/.nuxt/
+**/.next/
+**/.angular/
+**/.expo/
+
+# Generated files
+*.map
+*.
