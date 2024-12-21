@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pregnancy Healthcare System</title>
+    <title>Matru Arogy</title>
     <link rel="stylesheet" href="Style.css">
+   
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
     <script src="index.js"></script>
@@ -13,18 +14,19 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-links">
-            <a href="#" class="logo">HealthCare</a>
+            <a href="#" class="logo">Matru Arogya</a>
             <div class="nav-items">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#doctors">Find Doctors</a>
-                <a href="#Reports">Reports</a>
+                <a href="/frontend/report">Reports</a> <!-- Add ID for JavaScript -->
                 <a href="#emergency">Emergency</a>
                 <a href="#login" class="login-btn">Login</a>
                 <a href="#signup" class="signup-btn">Sign Up</a>
             </div>
         </div>
     </nav>
+    
 
     
     <!-- Home Section -->
@@ -55,71 +57,81 @@
         </div>
     </section>
 
-    <!-- Login Section -->
-    <section id="login" class="section hidden">
-        <div class="login-container">
-            <h2>Welcome Back</h2>
-            <form id="loginForm" class="login-form">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit" class="btn-primary">Login</button>
-                <p class="form-link">Don't have an account? <a href="#signup">Sign up</a></p>
-            </form>
-        </div>
-    </section>
+<!-- Login Section -->
+<section id="login" class="section hidden">
+    <div class="login-container">
+        <h2>Welcome Back</h2>
+        <form id="loginForm" class="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn-primary">Login</button>
+            <p class="form-link">Don't have an account? <a href="#signup">Sign up</a></p>
+        </form>
+    </div>
+</section>
 
-    <!-- Signup Section -->
-    <section id="signup" class="section hidden">
-        <div class="signup-container">
-            <h2>Create Account</h2>
-            <form id="signupForm" class="signup-form">
-                <div class="form-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" required>
-                </div>
-                <div class="form-group">
-                    <label for="signupEmail">Email</label>
-                    <input type="email" id="signupEmail" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="signupPassword">Password</label>
-                    <input type="password" id="signupPassword" name="password" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <!-- <button type="submit" class="btn-primary">Sign Up</button> -->
-                 
-                <button type="submit" class="btn-primary" id="signupButton">Sign Up</button>
+<!-- Signup Section -->
+<section id="signup" class="section hidden">
+    <div class="signup-container">
+        <h2>Create Account</h2>
+        <form id="signupForm" class="signup-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <!-- <button type="submit" class="btn-primary">Sign Up</button> -->
+             
+            <button type="submit" class="btn-primary" id="signupButton">Sign Up</button>
 
-                <p class="form-link">Already have an account? <a href="#login">Login</a></p>
-            </form>
-        </div>
-    </section>
+            <p class="form-link">Already have an account? <a href="#login">Login</a></p>
+        </form>
+    </div>
+</section>
 
     <!-- About Section -->
     <section id="about" class="section hidden">
         <div class="about-container">
-            <h2>About Us</h2>
-            <p>We are dedicated to improving maternal healthcare access and outcomes through innovative technology solutions.</p>
-            <div class="team-section">
-                <h3>Our Team</h3>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="/api/placeholder/150/150" alt="Team Member">
-                        <h4>Basavanjali N M</h4>
-                        <p>Team Leader</p>
-                    </div>
-                    <!-- Add other team members similarly -->
-                </div>
-            </div>
+            <h3>About Us</h3>
+            
+
+            <p>At MATRU AROGYA , we are dedicated to providing comprehensive and compassionate care for every stage of pregnancy. Our mission is to ensure that every expecting mother receives the guidance, support, and medical attention she needs to experience a healthy and joyful pregnancy journey.
+
+                What We Offer
+                Our pregnancy health care services are designed to cater to your unique needs, from conception to postpartum care. We prioritize your physical, emotional, and mental well-being, offering a range of services, including:
+                
+                Prenatal Care: Regular check-ups, ultrasound imaging, and diagnostic tests to monitor your baby's growth and ensure a healthy pregnancy.
+                Nutritional Guidance: Personalized diet plans to support your health and your baby’s development.
+                Prenatal Education: Workshops and resources to prepare you for labor, delivery, and newborn care.
+                Specialized Care: Management of high-risk pregnancies with advanced monitoring and expert consultation.
+                Mental Health Support: Counseling and support groups to address stress, anxiety, and emotional well-being during pregnancy.
+                Postpartum Care: Assistance with recovery after childbirth, lactation support, and baby care tips.
+                Our Commitment
+                We believe that every mother deserves a safe and nurturing environment for her and her baby. Our team of skilled obstetricians, midwives, nutritionists, and counselors work together to provide holistic care tailored to your needs.
+                
+                At [Your Organization Name], we’re here to support you every step of the way, ensuring that your pregnancy is a positive and empowering experience. Together, we’ll help you and your baby thrive.
+                
+            </p>
+            
+             
+           
         </div>
     </section>
 
